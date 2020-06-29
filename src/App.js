@@ -4,8 +4,7 @@ function App() {
   const name = 'react';
   return (
     <>
-      <h1>{name} 하이~</h1>
-      <h2>잘 작동하제?</h2>
+      {name === 'react' ? <h1>리액트 입니다.</h1> : <h2>리액트가 아닙니다.</h2>}
     </>
   );
 }
