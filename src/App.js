@@ -1,14 +1,10 @@
-import React from 'react';
-import './App.css';
-
-function App() {
-  const name = 'react';
-  return (
-    <>
-      <div className="react">{name}</div>
-      <input />
-    </>
-  );
+import React, { Component } from "react";
+import "./App.css";
+class App extends Component {
+  render() {
+    const name = "react";
+    return <div className="react">{name}</div>;
+  }
 }
 
 export default App;
