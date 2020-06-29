@@ -1,7 +1,6 @@
 import React from "react";
 
-const MyComponent = (props) => {
-  const { name, children } = props;
+const MyComponent = ({ name, children }) => {
   return (
     <div>
       나의 이름은 {name}이다. <br />
