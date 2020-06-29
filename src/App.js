@@ -3,7 +3,7 @@ import "./App.css";
 import MyComponent from "./MyComponent";
 
 const App = () => {
-  return <MyComponent name="ppby" />;
+  return <MyComponent />;
 };
 
 export default App;
