@@ -3,7 +3,7 @@ import "./App.css";
 import MyComponent from "./MyComponent";
 
 const App = () => {
-  return <MyComponent />;
+  return <MyComponent favoriteNumber={2} />;
 };
 
 export default App;
