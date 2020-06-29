@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
-  constructor(props) {
-    super(props);
-    // state 초기 값 설정
-    this.state = {
-      number: 0,
-      fixedNumber: 0,
-    };
-  }
+  state = {
+    number: 0,
+    fixedNumber: 0,
+  };
+
   render() {
     const { number, fixedNumber } = this.state; // state를 조회할 떈 this.state로 조회
     return (
