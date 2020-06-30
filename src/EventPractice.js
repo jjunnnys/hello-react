@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 
 export default class EventPractice extends Component {
   state = {
+    username: '',
     message: '',
   };
 
   // 이벤트 메서드
   handleChange = (e) => {
     this.setState({
-      message: e.target.value,
+      [e.target.name]: e.target.value, // []안에 넣은 레퍼런스가 가리키는 실제 값이 key값으로 사용
     });
   };
 
   handleClick = () => {
-    alert(this.state.message);
+    alert(`${this.state.username}: ${this.state.message}`);
     this.setState({
+      username: '',
       message: '',
     });
   };
@@ -23,6 +25,13 @@ export default class EventPractice extends Component {
     return (
       <div>
         <h1>이벤트 연습</h1>
+        <input
+          type="text"
+          name="username"
+          placeholder="이름을 입력하세요."
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
         <input
           type="text"
           name="message"
