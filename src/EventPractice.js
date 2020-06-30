@@ -20,7 +20,16 @@ export default class EventPractice extends Component {
             });
           }}
         />
-        {/* <h1>{this.state.message}</h1> */}
+        <button
+          onClick={() => {
+            alert(this.state.message);
+            this.setState({
+              message: '',
+            });
+          }}
+        >
+          확인
+        </button>
       </div>
     );
   }
