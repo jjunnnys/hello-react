@@ -4,6 +4,27 @@ export default class EventPractice extends Component {
   state = {
     message: '',
   };
+
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this); // 메서드를 this와 바인딩
+  }
+
+  // 이벤트 메서드
+  handleChange(e) {
+    this.setState({
+      message: e.target.value,
+    });
+  }
+
+  handleClick(e) {
+    alert(this.state.message);
+    this.setState({
+      message: '',
+    });
+  }
+
   render() {
     return (
       <div>
@@ -13,23 +34,9 @@ export default class EventPractice extends Component {
           name="message"
           placeholder="아무거나 입력해 보세요."
           value={this.state.message}
-          onChange={(event) => {
-            // console.log(event.target.value);
-            this.setState({
-              message: event.target.value,
-            });
-          }}
+          onChange={this.handleChange}
         />
-        <button
-          onClick={() => {
-            alert(this.state.message);
-            this.setState({
-              message: '',
-            });
-          }}
-        >
-          확인
-        </button>
+        <button onClick={this.handleClick}>확인</button>
       </div>
     );
   }
