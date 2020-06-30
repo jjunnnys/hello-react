@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 export default class EventPractice extends Component {
+  state = {
+    message: '',
+  };
   render() {
     return (
       <div>
@@ -9,10 +12,15 @@ export default class EventPractice extends Component {
           type="text"
           name="message"
           placeholder="아무거나 입력해 보세요."
+          value={this.state.message}
           onChange={(event) => {
-            console.log(event.target.value);
+            // console.log(event.target.value);
+            this.setState({
+              message: event.target.value,
+            });
           }}
         />
+        {/* <h1>{this.state.message}</h1> */}
       </div>
     );
   }
