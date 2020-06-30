@@ -19,13 +19,15 @@ export default class ValidationSample extends Component {
       clicked: true,
       validated: this.state.password === '0000',
     });
+    this.ppby.focus();
   };
 
   render() {
     return (
       <div>
         <input
-          type="text"
+          ref={(ref) => (this.ppby = ref)}
+          type="password"
           value={this.state.password}
           onChange={this.handleChange}
           className={
