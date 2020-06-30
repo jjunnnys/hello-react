@@ -5,25 +5,19 @@ export default class EventPractice extends Component {
     message: '',
   };
 
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this); // 메서드를 this와 바인딩
-  }
-
   // 이벤트 메서드
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
       message: e.target.value,
     });
-  }
+  };
 
-  handleClick(e) {
+  handleClick = () => {
     alert(this.state.message);
     this.setState({
       message: '',
     });
-  }
+  };
 
   render() {
     return (
